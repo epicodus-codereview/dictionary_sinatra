@@ -1,0 +1,33 @@
+<h1> <%= @word.word() %></h1>
+
+<h3>Definitions</h3>
+
+  <ol style="border-radius: 15px">
+    <% @word.definitions().each() do |definition| %>
+    <li><%= definition.definition() %></li>
+    <% end %>
+  </ol>
+
+<br>
+
+<form action="/definition_removal" method="post">
+  <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
+
+  <label for="remove_definition">Number of the word to remove:  </label>
+  <input id="remove_definition" name="remove_definition" type="number"></input>
+
+  <br>
+
+  <button type="submit">Remove Definition</button>
+
+</form>
+
+<hr>
+
+<div id="full_nav" class="container">
+  <ul>
+    <li><a href="/">Back to Home Page</a></li>
+    <li><a href="/word/<%= @word.id() %>">Back to the word</a></li>
+    <li><a href="/words">Back to all words</a></li>
+  </ul>
+</div>

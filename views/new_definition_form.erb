@@ -1,0 +1,22 @@
+<h2>Add a definition for:  <%= @word.word() %></h2>
+
+<form action="/new_definition" method="post">
+
+  <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
+
+  <label for="new_definition"></label>
+  <input id="new_definition" name="new_definition" type="text"></input>
+
+  <button type="submit">Add Definition</button>
+
+</form>
+
+<hr>
+
+<div id="full_nav" class="container"  >
+  <ul>
+    <li><a href="/">Back to Home</a></li>
+    <li><a href="/word/<%= @word.id() %>">Back to the word</a></li>
+    <li><a href="/words">Back to all words</a></li>
+  </ul>
+</div>

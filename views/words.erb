@@ -1,0 +1,18 @@
+<h1>Welcome to Your Dictionary</h1>
+
+<h3>Here are all your words:</h3>
+
+  <% @words.each() do |word| %>
+  <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
+  <% end %>
+
+
+<hr>
+
+<div id="partial_nav" class="container">
+  <ul>
+    <li><a href="/words/new">Add a new word</a></li>
+    <li><a href="/words/word_removal">Remove a Word</a></li>
+    <li><a href="/">Back to Home</a></li>
+  </ul>
+</div>

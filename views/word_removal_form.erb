@@ -1,0 +1,28 @@
+<h1>Your Dictionary</h1>
+
+<h3>Which word would you like to remove?</h3>
+
+<ol>
+  <% @words.each() do |word| %>
+  <li><%= word.word() %></li>
+  <% end %>
+</ol>
+
+<form action="/word_removal" method="post">
+
+  <label for="remove_word">Number of the word to remove:  </label>
+  <input id="remove_word" name="remove_word" type="number"></input>
+  <br>
+  <button type="submit">Remove Word</button>
+
+</form>
+
+
+<hr>
+
+<div id="full_nav" class="container"  >
+  <ul>
+    <li><a href="/">Back to Home</a></li>
+    <li><a href="/words">Back to all words</a></li>
+  </ul>
+</div>

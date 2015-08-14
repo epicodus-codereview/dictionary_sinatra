@@ -1,0 +1,27 @@
+<h2>Add a New Word Here:</h2>
+
+<form action="/new_word" method="post">
+
+  <label for="new_word">New word:</label>
+  <input id="new_word" name="new_word" type="text"></input>
+  <br>
+  <label for="initial_definition">Definition:</label>
+  <input id="initial_definition" name="initial_definition" type="text"></input>
+  <br>
+  <!-- FAB button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+  <i class="material-icons">add</i>
+</button>
+
+  <!-- <button type="submit">Add Word</button> -->
+
+</form>
+
+<hr>
+
+<div id="partial_nav" class="container"  >
+  <ul>
+    <li><a href="/">Back to Home</a></li>
+    <li><a href="/words">Back to all words</a></li>
+  </ul>
+</div>
